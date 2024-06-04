@@ -1,0 +1,29 @@
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+int mat[21][21];
+
+int main(){
+int n,m,i,j;
+cin>>n;
+for(int i=1;i<=n;++i){
+      for(int j=1;j<=n;++j){
+           if(i==1 or j==1 or i==n or j==n){
+                mat[i][j]=i+j;
+            }
+           else{
+            mat[i][j]=mat[i-1][j+1]+mat[i-1][j-1]+mat[i-1][j];
+    }
+  }
+}
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=n;j++)
+    {
+        cout<<mat[i][j]<<" ";
+    }
+    cout<<"\n";
+}
+}
