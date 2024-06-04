@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+void nule(int v[],int n)
+{
+    int e=0,zero=0;
+    for(int i=0;i<n;i++)
+    {
+        if(v[i]);
+        else
+        {
+            zero++;
+            for(int j=i;j<n;j++)
+            {
+                v[j]=v[j+1];
+            }
+            n--;
+            i--;
+        }
+
+    }
+    while(zero)
+    {
+        v[++n]=0;
+        zero--;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<v[i]<<" ";
+    }
+}
+
+int main(){
+
+    int n=9,a[]={ 1, 2, 0 ,3, 0, 6, 7 ,9 ,0 ,10};
+    nule(a,n);
+}
